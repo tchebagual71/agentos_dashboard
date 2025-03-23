@@ -1,3 +1,12 @@
+Here’s a clear **project map diagram** for the AgentOS Dashboard written entirely in Markdown using tree-style formatting.
+
+You can paste this directly into your README or docs.
+
+---
+
+### 📦 **AgentOS Project Map**
+
+```markdown
 AgentOS/
 ├── backend/
 │   ├── app/
@@ -32,8 +41,13 @@ AgentOS/
 ├── README.md                     # Project overview and usage
 ├── AgentOS_Implementation_Guide.md
 ├── README_FULL_AGENTOS.md
+```
 
+---
 
+### 🔄 **Project Flow Diagram**
+
+```text
 [Frontend UI]
    ↓
 [AgentTerminal / WorkflowBuilder]
@@ -45,10 +59,18 @@ AgentOS/
      [Workflow Engine]
            ↓
     [Output / Report / Response]
+```
 
+Here’s a **Mermaid-compatible project map diagram** and **flow diagram** for the AgentOS Dashboard. You can embed these into your Markdown files (e.g. `README.md`, Notion, or Docusaurus) if the viewer supports Mermaid syntax.
 
-##MERMAID FLOW
+---
 
+### 📍 **AgentOS File Structure – Mermaid Diagram**
+
+<details>
+<summary>Click to expand Mermaid code</summary>
+
+```mermaid
 graph TD
   A[agentos/] --> B[backend/]
   A --> C[frontend/]
@@ -71,3 +93,48 @@ graph TD
   C2 --> C7[App.tsx]
   C2 --> C8[main.tsx]
   C --> C9[Dockerfile]
+```
+
+</details>
+
+---
+
+### 🔄 **AgentOS Execution Flow – Mermaid Diagram**
+
+<details>
+<summary>Click to expand Mermaid code</summary>
+
+```mermaid
+flowchart TD
+  UI[Frontend UI (React)]
+  AT[AgentTerminal.tsx]
+  WB[WorkflowBuilder.tsx]
+  API[FastAPI Backend]
+  AR[Agent Runner (OpenAI/Ollama)]
+  WF[Workflow Engine]
+  RESP[Response to UI / Export]
+
+  UI --> AT
+  UI --> WB
+  AT --> API
+  WB --> API
+  API --> AR
+  API --> WF
+  AR --> RESP
+  WF --> RESP
+```
+
+</details>
+
+---
+
+### ✅ Embedding Tips
+
+- In **Markdown** (like Docusaurus, Obsidian, or GitHub Pages), wrap diagrams in:
+  ```markdown
+  ```mermaid
+  ...diagram code here...
+  ```
+  ```
+
+- In **Notion**, use a Mermaid renderer (like https://mermaid.live or a Notion widget plugin).
